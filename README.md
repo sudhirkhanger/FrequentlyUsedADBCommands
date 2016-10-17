@@ -33,3 +33,7 @@
 
     adb uninstall com.sudhirkhanger.app.someapp
 
+## LCD Density hack
+
+    adb shell getprop ro.sf.lcd_density
+    adb shell wm density 280
