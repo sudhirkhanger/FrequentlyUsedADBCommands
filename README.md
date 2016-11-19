@@ -37,3 +37,8 @@
 
     adb shell getprop ro.sf.lcd_density
     adb shell wm density 280
+
+## Attach emulator device
+
+	adb -d forward tcp:5601 tcp:5601 //when connected with one device via usb
+	abd -s -s 192.168.1.33:5555 forward tcp:5601 tcp:5601 //when you want to connect with a specific device
