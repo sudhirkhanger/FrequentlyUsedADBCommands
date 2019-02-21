@@ -7,8 +7,7 @@
     adb pull /data/data/com.sudhirkhanger.app.stockhawk/databases/quoteDatabase.db .
     
     adb shell "run-as com.sudhirkhanger.app.stockhawk chmod 600 /data/data/com.sudhirkhanger.app.stockhawk/databases/quoteDatabase.db"
-    
-    
+        
     adb shell
     run-as com.sudhirkhanger.app.stockhawk
     chmod 666 databases/quoteDatabase.db
@@ -20,6 +19,8 @@
     adb shell "run-as com.sudhirkhanger.app.stockhawk cp /data/data/com.sudhirkhanger.app.stockhawk/databases/quoteDatabase.db /sdcard/"
     exit
     exit
+	
+	adb shell "run-as applicationId cp /data/data/applicationId/files/default.realm /sdcard/" && adb pull /sdcard/default.realm ~/Downloads
 
 ## Copy a file from sdcard to current folder
 
