@@ -21,6 +21,7 @@
     exit
 	
 	adb shell "run-as applicationId cp /data/data/applicationId/files/default.realm /sdcard/" && adb pull /sdcard/default.realm ~/Downloads
+	adb shell "run-as applicationId cp /data/data/applicationId/files/default.realm /sdcard/" && adb pull /sdcard/default.realm ~/Downloads/realm_$(date +%Y-%m-%d_%H-%M-%S).realm
 
 ## Copy a file from sdcard to current folder
 
