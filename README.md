@@ -49,3 +49,35 @@
 
 	adb install my-app.apk
 	adb -s emulator-5554 my-app.apk
+
+## Clean Statusbar
+
+	adb shell settings put global sysui_demo_allowed 1
+	
+	// display time 12:00
+	adb shell am broadcast -a com.android.systemui.demo -e command clock -e hhmm 1200
+
+	// Display full mobile data without type
+	adb shell am broadcast -a com.android.systemui.demo -e command network -e mobile show -e level 4 -e datatype false
+	
+	// Hide notifications
+	adb shell am broadcast -a com.android.systemui.demo -e command notifications -e visible false
+	
+	// Show full battery but not in charging state
+	adb shell am broadcast -a com.android.systemui.demo -e command battery -e plugged false -e level 100
+	
+	// display time 12:00
+	adb shell am broadcast -a com.android.systemui.demo -e command clock -e hhmm 1200
+	
+	// Display full mobile data without type
+	adb shell am broadcast -a com.android.systemui.demo -e command network -e mobile show -e level 4 -e datatype false
+	
+	// Hide notifications
+	adb shell am broadcast -a com.android.systemui.demo -e command notifications -e visible false
+	
+	// Show full battery but not in charging state
+	adb shell am broadcast -a com.android.systemui.demo -e command battery -e plugged false -e level 100
+
+	adb shell am broadcast -a com.android.systemui.demo -e command exit
+	
+[Clean your status bar like a pro!](https://android.jlelse.eu/clean-your-status-bar-like-a-pro-76c89a1e2c2f)
