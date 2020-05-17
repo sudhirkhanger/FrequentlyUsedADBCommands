@@ -81,3 +81,14 @@
 	adb shell am broadcast -a com.android.systemui.demo -e command exit
 	
 [Clean your status bar like a pro!](https://android.jlelse.eu/clean-your-status-bar-like-a-pro-76c89a1e2c2f)
+
+
+## Running Activites
+
+	// check ACTIVITY MANAGER ACTIVITIES (dumpsys activity activities) Running activities section
+	adb shell dumpsys activity
+	adb shell dumpsys activity activities | sed -En -e '/Stack #/p' -e '/Running activities/,/Run #0/p'
+
+## Multiple devices
+
+	adb -s <device-id> // adb devices
