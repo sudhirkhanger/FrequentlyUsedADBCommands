@@ -92,3 +92,11 @@
 ## Multiple devices
 
 	adb -s <device-id> // adb devices
+
+# Show process
+
+    adb shell ps -A | grep package-name
+
+# Kill a process
+
+    adb shell am kill package-name
